@@ -120,3 +120,13 @@
 //     });
 // }).listen(3000);
 // console.log('started');
+
+
+var http = require('http');
+http.createServer(function(request, response){
+response.end('server is running');
+}).listen(4000);
+console.log('started');
+
+
+
