@@ -120,15 +120,73 @@
 // var express = require('express');
 // var app = express();
 // var admin = express();
-// app.all('/secret', function (req, res, next) {
+// app.all('*', function (req, res, next) {
+//   console.log('all');
 //   res.write('Accessing the secret section ...');
 //   next();
 // }).listen('3000');
 
-// app.get('/secret', function(req, res){
+// app.get('/secret/id', function(req, res){
+//   console.log('console');
 //     res.end('askldf');
 // })
 // console.log('running');
+
+//===============================app.delete ===========================
+
+
+// var express = require('express');
+// var app = express();
+
+// app.delete('/delete', function(req, res){
+//   res.end('delete request to homepage');
+// }).listen('3000');
+// app.get('/delete', function(req, res){
+//   res.end('delete method running');
+// });
+// console.log('running');
+
+
+//==============================app.disable ==========================
+
+// var express = require('express');
+// var app = express();
+
+// app.disabled('trust proxy');
+
+// false;
+
+//================================app.enable ============================
+
+// var express = require('express');
+// app.enable('trust proxy');
+// app.get('trust proxy');
+// => true
+
+
+
+//==========================app.disabled ===============================
+
+// var express = require('express');
+
+// app.disabled('trust proxy');
+// => true
+
+// app.enable('trust proxy');
+// app.disabled('trust proxy');
+// => false
+
+
+//=======================ap.enabled =================================
+
+// var express = require('express');
+
+// app.enabled('trust proxy');
+// => false
+
+// app.enable('trust proxy');
+// app.enabled('trust proxy');
+// => true
 
 
 
