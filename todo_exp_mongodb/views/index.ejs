@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MY APP</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body class= "container">
+
+    <h1>Todo Application Using Express and MongoDB</h1>
+    <hr>
+    
+  <form action="/quotes" method="POST">
+    <input type="text" placeholder="name" name="name">
+    <input type="text" placeholder="quote" name="quote">
+    <button type="submit">Submit</button>
+ </form>
+
+<br><br><br>
+
+  <table class="table">
+  <tr>
+    <td>S #</td>
+    <td>Student Name</td>
+    <td>Age</td>
+  </tr>
+  <% for(var i=0; i<mydata.length; i++) {%>
+
+  <tr>
+    <td><%= i + 1 %></td>
+    <td>
+      <span><%= mydata[i].name %></span>  
+    </td>
+    <td>
+        <span><%= mydata[i].id %></span>
+    </td>
+
+  </tr>
+  <% } %>
+  
+  </table>
+
+</body>
+</html>
